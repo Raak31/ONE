@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+<h2> Programa Para Calcular IMC </h2>
+<script>
+
+function saltarlinea(){
+	document.write("<br><br><br>");
+}
+
+function imprimir(frase){
+	document.write(frase);
+	saltarlinea();
+}
+
+function calcularimc(peso, altura){
+	return peso/(altura * altura);
+}
+
+nombre = prompt("Escriba su nombre");
+pesodado = prompt(nombre + ", escriba su peso: ");
+alturadada = prompt(nombre + ", escriba su altura: ");
+imcdado = calcularimc(pesodado,alturadada);
+
+
+imprimir(nombre + ", tu IMC calculado es: " + imcdado);
+
+if(imcdado < 18.5){
+	imprimir("IMC abajo de lo recomendado");
+}
+
+
+if(imcdado >= 18.5) {
+	if (imcdado <= 25 ) {
+	imprimir("IMC en lo recomendado");
+	}
+}
+
+
+if(imcdado > 25){
+	if (imcdado < 30) {
+	imprimir("IMC en PreObesidad");
+	}
+}
+
+if(imcdado >= 30){
+	imprimir("IMC en Obesidad");
+}
+
+
+</script>
+
+
